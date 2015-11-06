@@ -36,8 +36,7 @@ dataset. Plot the accuracy for all odd values of k from 1 to 9.
 ## Logistic Regression
 
 We will use *Scikit Learn* to train Logistic Regression classifiers
-for the 3DClothing data. You may want to take a look at the iPython
-notebook included in the repository and at the
+for the 3DClothing data. You may want to take a look at the
 [documentation](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 and examples.
 
