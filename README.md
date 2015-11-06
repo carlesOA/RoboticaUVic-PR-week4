@@ -67,7 +67,7 @@ system, or with another programming language. Other times we just want
 to save it to disk for later usage. Given a trained linear classifier
 object, explain what information should we be saving in order to be
 able to do so. Next, inspect the "shirts vs jeans" logistic
-regression classifier object we have trained in Question 3 (re-train
+regression classifier object we have trained in Question 2 (re-train
 it if necessary) and identify which variables contain said
 information. Finally, write the code necessary to use these variables
 to classify new test samples.  
