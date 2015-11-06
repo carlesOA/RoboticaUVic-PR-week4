@@ -109,7 +109,7 @@ classifiers. Describe what you see.
       pylab.show()  
  ```  
 
-- **Q6** We will now compare the performance of the linear and the RBF Support Vector Machines in a real dataset: Train the two classifiers in the *jeans* vs *shirts* problem from *Q3*, and compute the accuracy on the test set. What happened?    
+- **Q6** We will now compare the performance of the linear and the RBF Support Vector Machines in a real dataset: Train the two classifiers in the *jeans* vs *shirts* problem from *Q2*, and compute the accuracy on the test set. What happened?    
 
  > **Warning: Spoilers next**
  > It turns out that in high-dimensional spaces, it is usually fairly
