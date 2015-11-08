@@ -22,7 +22,8 @@ For this class we will use several datasets:
 - [Iris](https://archive.ics.uci.edu/ml/datasets/Iris): Very small dataset with three classes from the UCI repository. Use the train/test partition indicated by 'iris_idx_train.txt' and 'iris_idx_test.txt'
 - 3DClothing Dataset: This dataset contains a bag-of-words style representation of FINDDD descriptors extracted over a regular grid on 3D scans of different garments lying on a table. More information in: [Clothing Part Dataset](http://www.iri.upc.edu/groups/perception/#clothingDataset)
 - [Jain](http://cs.joensuu.fi/sipu/datasets/jain.txt): Small dataset of 2-dimensional points.
-- Robot Waiter: Classification scores for a robot waiter's vision system.
+- Robot Waiter: Classification scores for a robot waiter's vision system.  
+In the "Campus Virtual" (Unitat 4->Activitats->Classification) you will find downloadables for the 3DClothing and the Robot Waiter datasets, as well as the train/test splits for the Iris dataset.
 
 ## K-Nearest Neighbors
 
