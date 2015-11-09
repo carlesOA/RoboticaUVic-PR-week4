@@ -147,7 +147,7 @@ We have just finished developing the vision system of a robot waiter to work in 
    pylab.yticks(range(len(class_names)), class_names)
    pylab.xticks(range(len(class_names)), class_names)
    pylab.xticks(rotation=90)
-   pylab.show()```
+   pylab.show()
    
 ## Extra
 
