@@ -129,7 +129,8 @@ We have just finished developing the vision system of a robot waiter to work in 
 - **Q8** After developing a french fries image logistic regression classifier for our robot waiter, we want to know how good it is. We have run the image classifier in 150.000 images, of which 150 are positives. Load the probability of french fries computed by our classifier and the true labels, and compute:
  - Accuracy and Error Rate (assume threshold is at 0.5)
  - Balanced Error Rate (implies computing True Positive Rate, True Negative Rate)
- - F1-score (implies computing also precision and recall)
+ - F1-score (implies computing also precision and recall)  
+  > Hint: Since we will consider the whole dataset, there is no need to sort the values.
  - Since being a bit slower is prefearable to our robot attacking a client wearing stripes, we are more concerned about precision than recall. Compute the f-beta score with beta=0.5
  - Finally, plot the precision-recall curve for our classifier.  
   > Use the function [precision_recall_curve](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html#sklearn-metrics-precision-recall-curve) found in sklearn.metrics.
