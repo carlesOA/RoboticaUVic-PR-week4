@@ -19,10 +19,11 @@ This is a personal assignment, please complete it **individually**.
 # Datasets
 
 For this class we will use several datasets:
-- [Iris](https://archive.ics.uci.edu/ml/datasets/Iris): Very small dataset with three classes from the UCI repository (you will need to download the data and labels from there). Use the train/test partition indicated by 'iris_idx_train.txt' and 'iris_idx_test.txt'.
+- [Iris](https://archive.ics.uci.edu/ml/datasets/Iris): Very small dataset with three classes from the UCI repository (you will need to download the data and labels from there). Use the train/test partition indicated by the indexes 'iris_idx_train.txt' and 'iris_idx_test.txt' (you can use them for slicing).
 - 3DClothing Dataset: This dataset contains a bag-of-words style representation of FINDDD descriptors extracted over a regular grid on 3D scans of different garments lying on a table. More information in: [Clothing Part Dataset](http://www.iri.upc.edu/groups/perception/#clothingDataset)
 - [Jain](http://cs.joensuu.fi/sipu/datasets/jain.txt): Small dataset of 2-dimensional points.
 - Robot Waiter: Classification scores for a robot waiter's vision system.  
+   
 In the "Campus Virtual" (Unitat 4->Activitats->Classification) you will find downloadables for the 3DClothing and the Robot Waiter datasets, as well as the train/test splits for the Iris dataset. Files with npy extension can be loaded with [numpy.load](http://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html#numpy-load).
 
 ## K-Nearest Neighbors
@@ -48,7 +49,7 @@ new *label* variables!). Then, train a Logistic Regression classifier,
 adjusting the *C* parameter with cross-validation. This time you can
 chose to use the
 [cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedKFold.html)
-functions provided by sklearn.  Plot the training and validation
+functions provided by sklearn. Plot the training and validation
 accuracy as *C* is incresed, and print the test accuracy for the
 selected model.
 
@@ -118,8 +119,8 @@ classifiers. Describe what you see.
    capacity of the non-linear classifiers may lead to overfitting.
 
 - **Q7** Take a look at the variables **support_**,
-**support_vectors_** and **dual_coef_** of your trained non-linear
-classifier object for the *jeans* vs *shirts* problem. Explain what
+**support_vectors_** and **dual_coef_** of the non-linear
+classifier object for the *jeans* vs *shirts* problem trained in *Q6*. Explain what
 they are.
 
 ## Classifier Evaluation
