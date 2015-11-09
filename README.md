@@ -140,6 +140,15 @@ We have just finished developing the vision system of a robot waiter to work in 
 
 - **Q9** Now load all the classifier scores of our robot waiter's vision system, and compute a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html#sklearn-metrics-confusion-matrix) (take a look [here](https://en.wikipedia.org/wiki/Confusion_matrix) for a definition). Describe what you can observe in the matrix.  
 
+  > You can plot the matrix using the following code:
+  > ```python
+   import pylab
+   pylab.imshow(conf_matrix, interpolation='nearest')
+   pylab.yticks(range(len(class_names)), class_names)
+   pylab.xticks(range(len(class_names)), class_names)
+   pylab.xticks(rotation=90)
+   pylab.show()```
+   
 ## Extra
 
 - The Scikit Learn webpage has some nice
