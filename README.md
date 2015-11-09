@@ -126,8 +126,8 @@ they are.
 ## Classifier Evaluation
 We have just finished developing the vision system of a robot waiter to work in a bar. Now we have to evaluate it. 
 
-- **Q8** After developing a french fries image classifier for our robot waiter, we want to know how good it is. We have run the image classifier in 150.000 images, of which 150 are positives. Load the probability of french fries computed by our classifier and the true labels, and compute:
- - Accuracy and Error Rate
+- **Q8** After developing a french fries image logistic regression classifier for our robot waiter, we want to know how good it is. We have run the image classifier in 150.000 images, of which 150 are positives. Load the probability of french fries computed by our classifier and the true labels, and compute:
+ - Accuracy and Error Rate (assume threshold is at 0.5)
  - Balanced Error Rate (implies computing True Positive Rate, True Negative Rate)
  - F1-score (implies computing also precision and recall)
  - Since being a bit slower is prefearable to our robot attacking a client wearing stripes, we are more concerned about precision than recall. Compute the f-beta score with beta=0.5
