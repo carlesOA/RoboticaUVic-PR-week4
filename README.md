@@ -138,7 +138,7 @@ We have just finished developing the vision system of a robot waiter to work in 
 
    > Use the function [precision_recall_curve](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html#sklearn-metrics-precision-recall-curve) found in sklearn.metrics.  
 
-- **Q9** Now load the remaining classifier scores of our robot waiter's vision system, and compute a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html#sklearn-metrics-confusion-matrix) (take a look [here](https://en.wikipedia.org/wiki/Confusion_matrix) for a definition). Describe what you can observe in the matrix.  
+- **Q9** Now load all the classifier scores of our robot waiter's vision system, and compute a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html#sklearn-metrics-confusion-matrix) (take a look [here](https://en.wikipedia.org/wiki/Confusion_matrix) for a definition). Describe what you can observe in the matrix.  
 
 ## Extra
 
