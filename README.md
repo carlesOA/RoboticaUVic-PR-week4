@@ -130,9 +130,12 @@ We have just finished developing the vision system of a robot waiter to work in 
  - Accuracy and Error Rate (assume threshold is at 0.5)
  - Balanced Error Rate (implies computing True Positive Rate, True Negative Rate)
  - F1-score (implies computing also precision and recall)  
+
   > Hint: Since we will consider the whole dataset, there is no need to sort the values.
+
  - Since being a bit slower is prefearable to our robot attacking a client wearing stripes, we are more concerned about precision than recall. Compute the f-beta score with beta=0.5
  - Finally, plot the precision-recall curve for our classifier.  
+
   > Use the function [precision_recall_curve](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html#sklearn-metrics-precision-recall-curve) found in sklearn.metrics.
 
 - **Q9** Now load the remaining classifier scores of our robot waiter's vision system, and compute a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html#sklearn-metrics-confusion-matrix) (take a look [here](https://en.wikipedia.org/wiki/Confusion_matrix) for a definition). Describe what you can observe in the matrix.  
