@@ -44,7 +44,7 @@ and examples.
 
 - **Q2** First we will focus on a two-class problem. Use slicing to
 get a new training and testing set that only contains the instances
-corresponding to **shirt** and **polo shirt** (remember to also create
+corresponding to **shirt** and **jeans** (remember to also create
 new *label* variables!). Then, train a Logistic Regression classifier,
 adjusting the *C* parameter with cross-validation. This time you can
 chose to use the
