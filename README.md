@@ -75,7 +75,9 @@ information. Finally, write the code necessary to use these variables
 to classify new test samples.  
 
  > Hint: In Python, you can see the methods and variables of an object
-   with dir(*object*).
+   with dir(*object*).  
+ > Remember that the equation for Logistic Regression is:  
+ > ![logreg](img/logreg.png)  
 
 ## Support Vector Machines
 
