@@ -76,8 +76,8 @@ to classify new test samples.
 
  > Hint: In Python, you can see the methods and variables of an object
    with dir(*object*).  
- > Hint: Variables that start and end with two underscores, such as "\_\_dir\_\_" are internal python object methods, not relevant for our problem.
- > In sklearn, variables tend to have a underscore at the end, while functions have no underscores at thebeginning/ending of the name.
+ > Hint: Variables that start and end with two underscores, such as "\_\_dir\_\_" are internal Python object methods, not relevant for our problem.  
+ > Hint: In sklearn, variables tend to have a underscore at the end, while functions have no underscores at the beginning/ending of the name.
  > Remember that the equation for Logistic Regression is:  
  > ![logreg](img/logreg.png)  
 
