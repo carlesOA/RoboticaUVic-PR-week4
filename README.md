@@ -1,4 +1,4 @@
-# RoboticaUVic-PR-week1
+# RoboticaUVic-PR-week4
 UVic Robotics Master. Pattern Recognition Homework 2
 
 ## Instructions
@@ -19,10 +19,12 @@ This is a personal assignment, please complete it **individually**.
 # Datasets
 
 For this class we will use several datasets:
-- [Iris](https://archive.ics.uci.edu/ml/datasets/Iris): Very small dataset with three classes from the UCI repository. Use the train/test partition indicated by 'iris_idx_train.txt' and 'iris_idx_test.txt'
+- [Iris](https://archive.ics.uci.edu/ml/datasets/Iris): Very small dataset with three classes from the UCI repository (you will need to download the data and labels from there). Use the train/test partition indicated by the indexes 'iris_idx_train.txt' and 'iris_idx_test.txt' (you can use them for slicing).
 - 3DClothing Dataset: This dataset contains a bag-of-words style representation of FINDDD descriptors extracted over a regular grid on 3D scans of different garments lying on a table. More information in: [Clothing Part Dataset](http://www.iri.upc.edu/groups/perception/#clothingDataset)
 - [Jain](http://cs.joensuu.fi/sipu/datasets/jain.txt): Small dataset of 2-dimensional points.
-- Robot Waiter: Classification scores for a robot waiter's vision system.
+- Robot Waiter: Classification scores for a robot waiter's vision system.  
+   
+In the "Campus Virtual" (Unitat 4->Activitats->Classification) you will find downloadables for the 3DClothing and the Robot Waiter datasets, as well as the train/test splits for the Iris dataset. Files with npy extension can be loaded with [numpy.load](http://docs.scipy.org/doc/numpy/reference/generated/numpy.load.html#numpy-load).
 
 ## K-Nearest Neighbors
 
@@ -42,12 +44,12 @@ and examples.
 
 - **Q2** First we will focus on a two-class problem. Use slicing to
 get a new training and testing set that only contains the instances
-corresponding to **shirt** and **polo shirt** (remember to also create
+corresponding to **shirt** and **jeans** (remember to also create
 new *label* variables!). Then, train a Logistic Regression classifier,
 adjusting the *C* parameter with cross-validation. This time you can
 chose to use the
 [cross-validation](http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedKFold.html)
-functions provided by sklearn.  Plot the training and validation
+functions provided by sklearn. Plot the training and validation
 accuracy as *C* is incresed, and print the test accuracy for the
 selected model.
 
@@ -73,7 +75,11 @@ information. Finally, write the code necessary to use these variables
 to classify new test samples.  
 
  > Hint: In Python, you can see the methods and variables of an object
-   with dir(*object*).
+   with dir(*object*).  
+ > Hint: Variables that start and end with two underscores, such as "\_\_dir\_\_" are internal Python object methods, not relevant for our problem.  
+ > Hint: In sklearn, variables tend to have a underscore at the end, while functions have no underscores at the beginning/ending of the name.
+ > Remember that the equation for Logistic Regression is:  
+ > ![logreg](img/logreg.png)  
 
 ## Support Vector Machines
 
@@ -117,23 +123,36 @@ classifiers. Describe what you see.
    capacity of the non-linear classifiers may lead to overfitting.
 
 - **Q7** Take a look at the variables **support_**,
-**support_vectors_** and **dual_coef_** of your trained non-linear
-classifier object for the *jeans* vs *shirts* problem. Explain what
+**support_vectors_** and **dual_coef_** of the non-linear
+classifier object for the *jeans* vs *shirts* problem trained in *Q6*. Explain what
 they are.
 
 ## Classifier Evaluation
 We have just finished developing the vision system of a robot waiter to work in a bar. Now we have to evaluate it. 
 
-- **Q8** After developing a french fries image classifier for our robot waiter, we want to know how good it is. We have run the image classifier in 150.000 images, of which 150 are positives. Load the probability of french fries computed by our classifier and the true labels, and compute:
- - Accuracy and Error Rate
+- **Q8** After developing a french fries image logistic regression classifier for our robot waiter, we want to know how good it is. We have run the image classifier in 150.000 images, of which 150 are positives. Load the probability of french fries computed by our classifier and the true labels, and compute:
+ - Accuracy and Error Rate (assume threshold is at 0.5)
  - Balanced Error Rate (implies computing True Positive Rate, True Negative Rate)
- - F1-score (implies computing also precision and recall)
+ - F1-score (implies computing also precision and recall)  
+
+    > Hint: Since we will consider the whole dataset, there is no need to sort the values.  
+
  - Since being a bit slower is prefearable to our robot attacking a client wearing stripes, we are more concerned about precision than recall. Compute the f-beta score with beta=0.5
  - Finally, plot the precision-recall curve for our classifier.  
-  > Use the function [precision_recall_curve](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html#sklearn-metrics-precision-recall-curve) found in sklearn.metrics.
 
-- **Q9** Now load the remaining classifier scores of our robot waiter's vision system, and compute a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html#sklearn-metrics-confusion-matrix) (take a look [here](https://en.wikipedia.org/wiki/Confusion_matrix) for a definition). Describe what you can observe in the matrix.  
+   > Use the function [precision_recall_curve](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html#sklearn-metrics-precision-recall-curve) found in sklearn.metrics.  
 
+- **Q9** Now load all the classifier scores of our robot waiter's vision system, and compute a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html#sklearn-metrics-confusion-matrix) (take a look [here](https://en.wikipedia.org/wiki/Confusion_matrix) for a definition). Describe what you can observe in the matrix.  
+
+  > You can plot the matrix using the following code:
+  > ```python
+   import pylab
+   pylab.imshow(conf_matrix, interpolation='nearest')
+   pylab.yticks(range(len(class_names)), class_names)
+   pylab.xticks(range(len(class_names)), class_names)
+   pylab.xticks(rotation=90)
+   pylab.show()
+   
 ## Extra
 
 - The Scikit Learn webpage has some nice
