@@ -1,0 +1,40 @@
+import numpy as np
+import scipy.spatial.distance as dist
+import csv
+import math
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC, SVC
+from sklearn.neighbors import KNeighborsClassifier
+
+print "Solving Q1"
+
+
+data = np.array([map(float, x.split(',')[:-1]) for x in open('iris.data') if x.strip()!=''])
+labels = np.array([x.split(',')[-1].strip() for x in open('iris.data') if x.strip()!=''])
+
+idx_train = np.loadtxt('iris_idx_train.txt')
+idx_test = np.loadtxt('iris_idx_test.txt')
+
+idx_train = idx_train.astype(int)
+idx_test = idx_test.astype(int)
+
+data_train = data[idx_train,:]
+data_test = data[idx_test,:]
+labels_train = labels[idx_train]
+labels_test = labels[idx_test]
+
+
+def runknn(tr_data, tr_labels, te_data, te_labels):
+    for k in range(1,15,2):
+        #Here we use the KNN function from scikit learn (in the
+        #homework you will have to implement it yourselves) 
+        #First we create a classifier object
+        knn = KNeighborsClassifier(k)
+        #Then we "train" it with the training data
+        knn.fit(data_train, labels_train)
+        #Finally we compute the accuracy of the test data
+        acc = knn.score(data_test, labels_test)
+        print 'Accuracy (k=%d): %.4f'%(k,acc)
+
+runknn(data_train, labels_train, data_test, labels_test)
